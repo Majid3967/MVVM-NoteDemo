@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -21,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
         noteViewModel.getAllNotes().observe(this, new Observer<List<Note>>() {
             @Override
             public void onChanged(List<Note> notes) {
-                //update RecyclerView
-                Log.i("OnChange","Working");
+                //Update RecyclerView
+                Toast.makeText(MainActivity.this,"Change",Toast.LENGTH_SHORT).show();
             }
         });
     }

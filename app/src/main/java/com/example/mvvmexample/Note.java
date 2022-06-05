@@ -1,9 +1,11 @@
 package com.example.mvvmexample;
 
 import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 @Entity(tableName = "note_table")
 public class Note {
+    @PrimaryKey
     private int id;
     private String title;
     private String description;
