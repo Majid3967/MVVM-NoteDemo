@@ -1,10 +1,13 @@
-package com.example.mvvmexample;
+package com.example.mvvmexample.viewmodels;
 
 import android.app.Application;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
+
+import com.example.mvvmexample.databases.models.Note;
+import com.example.mvvmexample.repositorys.NoteRepository;
 
 import java.util.List;
 

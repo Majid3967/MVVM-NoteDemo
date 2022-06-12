@@ -1,9 +1,13 @@
-package com.example.mvvmexample;
+package com.example.mvvmexample.repositorys;
 
 import android.app.Application;
 import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
+
+import com.example.mvvmexample.databases.daos.NoteDao;
+import com.example.mvvmexample.databases.NoteDatabase;
+import com.example.mvvmexample.databases.models.Note;
 
 import java.util.List;
 
@@ -27,7 +31,7 @@ public class NoteRepository {
         new DeleteNoteAsyncTask(noteDao).execute(note);
     }
     public void deleteAllNotes(){
-        new DeleteNoteAsyncTask(noteDao).execute();
+        new DeleteAllNoteAsyncTask(noteDao).execute();
     }
     public LiveData<List<Note>> getAllNotes(){
         return allNotes;
