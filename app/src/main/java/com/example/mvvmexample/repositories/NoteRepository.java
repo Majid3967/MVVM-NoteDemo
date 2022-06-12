@@ -1,4 +1,4 @@
-package com.example.mvvmexample.repositorys;
+package com.example.mvvmexample.repositories;
 
 import android.app.Application;
 import android.os.AsyncTask;
